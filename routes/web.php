@@ -11,6 +11,9 @@
 |
 */
 
+use App\Principal as Principal;
+
 Route::get('/', function () {
-    return view('welcome');
+	$data = Principal::indexValues();
+    return view('layouts.template', $data);
 });
