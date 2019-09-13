@@ -17,3 +17,11 @@ Route::get('/', function () {
 	$data = Principal::indexValues();
     return view('layouts.template', $data);
 });
+
+Route::get('login', 'Auth\LoginController@showLoginForm');
+
+Route::get('/usuario', 'UserController@listar');
+Route::get('/usuario/criar', 'Auth\RegisterController@showRegistrationForm');
+
+Route::get('/perfil/criar', 'PerfilController@criar');
+Route::post('/perfil/criar', 'PerfilController@persistir');

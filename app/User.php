@@ -36,4 +36,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    private static function padrao()
+    {
+        $data['menuTopoAtivo'] = 'Usuário';
+        $data['tituloPagina'] = 'Usuário';
+        return $data;
+    }
+    public static function listarValues()
+    {
+        $data = self::padrao();
+        $data['scriptName'] = 'layouts.block.script';
+        $data['viewName'] = 'site.usuario.listar';
+        $data['tituloPagina'] = ' - Listar';
+        $data["users"] = self::all();
+
+        return $data;
+    }
 }
