@@ -90,6 +90,13 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+        'testing' => [
+            'driver'    => 'mysql',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+        ],
 
     ],
 
