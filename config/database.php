@@ -95,6 +95,9 @@ return [
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
+            'username' => env('DB_USERNAME'),
+            'database' => env('DB_DATABASE'),
+            'password' => env('DB_PASSWORD'),
             'strict'    => false,
         ],
 
