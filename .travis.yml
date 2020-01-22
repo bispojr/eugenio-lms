@@ -5,10 +5,13 @@ php:
 
 addons:
   chrome: stable
-  
+
 services:
   - mysql
-  
+
+before_install:
+  - mysql -e 'CREATE SCHEMA testing;'
+
 install:
   - cp .env.travis .env
   - cp phpunit.travis.xml phpunit.xml
