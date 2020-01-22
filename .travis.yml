@@ -10,7 +10,7 @@ services:
   - mysql
 
 before_install:
-  - mysql -e 'CREATE SCHEMA testing;'
+  - mysql -e 'CREATE SCHEMA eugenio_db;'
 
 install:
   - cp .env.travis .env
